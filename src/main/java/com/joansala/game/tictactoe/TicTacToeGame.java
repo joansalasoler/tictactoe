@@ -134,8 +134,8 @@ public class TicTacToeGame extends BaseGame {
         this.state = board.position();
         setTurn(board.turn());
         setMove(NULL_MOVE);
-        resetCursor();
         updateState();
+        resetCursor();
     }
 
 
@@ -362,8 +362,8 @@ public class TicTacToeGame extends BaseGame {
         state[player] ^= bit(move);
         setTurn(-turn);
         setMove(move);
-        resetCursor();
         updateState();
+        resetCursor();
     }
 
 
