@@ -1,7 +1,13 @@
 What is it?
 ===========
 
-A tic-tac-toe engine.
+A tic-tac-toe engine implemented with the Samurai Framework.
+
+Usage and Documentation
+=======================
+
+See the repository https://github.com/joansalasoler/engines for usage
+instructions.
 
 The Latest Version
 ==================
