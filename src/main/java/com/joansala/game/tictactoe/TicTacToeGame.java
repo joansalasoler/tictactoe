@@ -95,7 +95,7 @@ public class TicTacToeGame extends BaseGame {
     public TicTacToeGame() {
         super(BOARD_SIZE);
         cursors = new int[BOARD_SIZE];
-        setBoard(new TicTacToeBoard());
+        setStartingBoard(new TicTacToeBoard());
     }
 
 
@@ -105,7 +105,7 @@ public class TicTacToeGame extends BaseGame {
      * @return      An immutable board containing the state
      */
     @Override
-    public Board getBoard() {
+    public Board getStartingBoard() {
         return board;
     }
 
@@ -116,8 +116,8 @@ public class TicTacToeGame extends BaseGame {
      * @param board     Immutable representation of the state
      */
     @Override
-    public void setBoard(Board board) {
-        setBoard((TicTacToeBoard) board);
+    public void setStartingBoard(Board board) {
+        setStartingBoard((TicTacToeBoard) board);
     }
 
 
@@ -128,7 +128,7 @@ public class TicTacToeGame extends BaseGame {
      *
      * @param board     Immutable representation of the state
      */
-    public void setBoard(TicTacToeBoard board) {
+    public void setStartingBoard(TicTacToeBoard board) {
         this.index = -1;
         this.board = board;
         this.state = board.position();
@@ -207,7 +207,7 @@ public class TicTacToeGame extends BaseGame {
      * @return          A new {@link Board} instance
      */
     @Override
-    public TicTacToeBoard toBoard() {
+    public TicTacToeBoard getCurrentBoard() {
         return new TicTacToeBoard(state, turn);
     }
 
@@ -327,7 +327,7 @@ public class TicTacToeGame extends BaseGame {
      * moves one by one. The cursor is updated each time a move is generated
      * so that the next call to this method returns the next legal move.
      *
-     * @return The next legal move on the current state of the game, or 
+     * @return The next legal move on the current state of the game, or
      *         {@link #NULL_MOVE} if there are no more legal moves.
      */
     @Override

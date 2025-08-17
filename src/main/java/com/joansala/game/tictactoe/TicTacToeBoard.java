@@ -110,7 +110,7 @@ public class TicTacToeBoard extends BaseBoard<long[]> {
      * @return              Move identifier
      */
     @Override
-    public int toMove(String notation) {
+    public int parseCoordinates(String notation) {
         return algebraic.toIndex(notation);
     }
 
@@ -134,7 +134,7 @@ public class TicTacToeBoard extends BaseBoard<long[]> {
      * @return              A new {@code TicTacToeBoard}
      */
     @Override
-    public TicTacToeBoard toBoard(String notation) {
+    public TicTacToeBoard fromDiagram(String notation) {
         String[] fields = notation.split(" ");
 
         long[] position = toPosition(fen.toArray(fields[0]));
