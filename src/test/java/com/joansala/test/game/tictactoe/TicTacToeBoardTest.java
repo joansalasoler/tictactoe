@@ -13,7 +13,7 @@ import com.joansala.util.suites.SuiteReader;
 public class TicTacToeBoardTest implements BoardContract {
 
     /** Test suite file path */
-    private static String SUITE_PATH = "tictactoe-bench.suite";
+    private static String SUITE_PATH = "src/test/resources/tictactoe-bench.suite";
 
 
     /**
