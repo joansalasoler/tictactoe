@@ -211,6 +211,15 @@ public class TicTacToeBoard extends BaseBoard<long[]> {
 
 
     /**
+     * {@inheritDoc}
+     */
+    @Override
+    public long hash() {
+        return TicTacToeGame.computeHash(position);
+    }
+
+
+    /**
      * Converts the game state encapsulated by this board to a string
      * suitable to be shown on the command line interface.
      */

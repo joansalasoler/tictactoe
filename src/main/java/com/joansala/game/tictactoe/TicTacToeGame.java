@@ -453,6 +453,17 @@ public class TicTacToeGame extends BaseGame {
      */
     @Override
     protected long computeHash() {
+        return computeHash(state);
+    }
+
+
+    /**
+     * Computes hash code for the given position and turn.
+     *
+     * @param state     Position array
+     * @return          Hash code for the position
+     */
+    protected static long computeHash(long[] state) {
         return (
             state[SOUTH_PIECE] << BOARD_SIZE |
             state[NORTH_PIECE]
